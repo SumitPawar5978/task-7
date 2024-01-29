@@ -22,10 +22,13 @@ body {
 }
 
 /* ===Hero section start=== */
-.navbar-nav {
-    list-style-type: disc;
-    padding-left: 0;
+.navbar-nav li {
+    list-style: disc; /* Use 'inside' if you want the bullets inside the list items */
+    margin-bottom: 5px; /* Adjust as needed */
     color: white;
+}
+.navbar-nav li a{
+    margin-left: -12px !important; 
 }
 
 #hero-section .hero-img-one {
@@ -605,6 +608,7 @@ h6 {
 /* ----about page start---- */
 #for_bg_black {
     background-color: #000000;
+    margin-top: -6px;
 }
 
 /* ===about hero section start==== */
@@ -814,9 +818,12 @@ h6 {
     }
 }
 
-@media (max-width: 425px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
+    .navbar-nav li a{
+        margin-left: 0px !important; 
+    }
     #hero-section .hero-img-one {
-        height: 35rem;
+        /* height: 46rem !important; */
         width: 100%;
     }
 
@@ -1063,7 +1070,7 @@ h6 {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px){
 
     /* #hero-section .hero-img-one{
         height: 44rem;
@@ -1073,6 +1080,9 @@ h6 {
         height: 44rem;
         width: 30%;
     } */
+    .navbar-nav li a{
+        margin-left: 0px !important; 
+    }
     #hero-section .hero-main-text h1 {
         margin-left: 49px;
         margin-top: -40px;
@@ -1151,5 +1161,7 @@ h6 {
         height: 200px;
     }
 }
-
+.modal-header{
+    border: none;
+}
 /* ===media query end=== */
