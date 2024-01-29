@@ -77,11 +77,31 @@ body {
     right: 183px;
 }
 
+#hero-section textPath {
+    letter-spacing: 1px
+}
+
+.circular_text {
+    animation: rotateText 5s linear infinite;
+    transform-origin: center;
+}
+
+@keyframes rotateText {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
 #hero-section .rounded_text img {
     height: 50px;
     width: 50px;
-    right: 210px;
-    bottom: 21px;
+    right: 229px;
+    bottom: -5px;
     transition: all 0.5s;
 }
 
@@ -259,6 +279,28 @@ body {
     width: 66%;
     position: absolute;
     right: 118px;
+}
+
+.circular_text_2 {
+    animation: rotateText 10s linear infinite;
+    transform-origin: center;
+}
+
+@keyframes rotateText {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#popup_video textPath {
+    font-size: 9px;
+    word-spacing: 5px;
+    font-weight: 600;
+    letter-spacing: 2px;
 }
 
 #popup_video .pop_up_butn {
@@ -639,11 +681,12 @@ h6 {
 /* ====about info section end== */
 
 /* ===brands section start===  */
-    #brands {
-       padding-left: 40px;
-        padding-block: 100px ;
-    }
- /* ===brands section end=== */
+#brands {
+    padding-left: 40px;
+    padding-block: 100px;
+}
+
+/* ===brands section end=== */
 /* ----about page end---- */
 
 /* ===service page start=== */
@@ -676,15 +719,17 @@ h6 {
     color: rgba(93, 93, 93, 1);
 }
 
-#services_two .for-black-bg {
+/* #services_two .for-black-bg {
     height: 200px;
     width: 200px;
     border-radius: 50%;
     background: rgb(0, 0, 0);
     top: 331px;
     z-index: 1;
-}
-
+} */
+/* #services_two .rounded_text{
+    background-color: red !important;
+} */
 #services_two .services-main-img {
     right: 82px;
     top: 29px;
@@ -692,10 +737,45 @@ h6 {
     filter: grayscale(100%);
 }
 
-#services_two .services-play-btn {
+#services_two svg {
+    position: absolute;
+    top: 300px;
+    left: -50px;
+    background: white;
+    border-radius: 50%;
+}
+
+#services_two textPath {
+    font-size: 9px;
+    font-weight: 600;
+    word-spacing: 3px;
+    letter-spacing: 2px;
+    color: black;
+}
+
+#services_two a {
+    top: 349px;
+    left: -2px;
+    height: 104px;
+    width: 104px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#services_two i {
+    /* top: 350px; */
+    color: rgb(255, 255, 255);
+    font-size: 30px !important;
+
+}
+
+/* #services_two .services-play-btn {
     top: 331px;
     z-index: 1;
-}
+} */
 
 /* ===services 2 section end=== */
 /* ====service page end=== */
@@ -753,12 +833,12 @@ h6 {
 
     #hero-section svg {
         left: 16px !important;
-        bottom: -29px !important;
+        bottom: -63px !important;
     }
 
     #hero-section .rounded_text img {
-        bottom: -3px;
-        left: 42px !important;
+        bottom: -14px;
+        left: 65px !important;
     }
 
     #hero-section .ph_num {
@@ -879,6 +959,7 @@ h6 {
         font-size: 32px;
         line-height: 40px;
     }
+
     /* #brands {
         padding-left: 0px;
          padding-block: 100px ;
@@ -948,24 +1029,38 @@ h6 {
         height: 275px;
     }
 
-    #services_two
-    .services-play-btn {
+    #services_two .services-play-btn {
         height: 120px;
         width: 120px;
         top: 182px;
         left: -13px;
     }
-    #services_two .for-black-bg{
+
+    #services_two .for-black-bg {
         background-color: rgb(0, 0, 0);
         height: 120px;
         width: 120px;
         top: 182px;
         left: -13p;
     }
-    #brands-2{
+    #services_two  svg{
+        height: 130px;
+        width: 130px;
+        top: 208px;
+    }
+    #services_two a {
+        height: 60px;
+        width: 60px;
+        left: 25px !important;
+        top: 243px;
+    }
+    #services_two i {
+        font-size: 20px !important;
+    }
+    #brands-2 {
         margin-top: 20rem !important;
         padding-block: 0px;
-     }
+    }
 }
 
 @media (max-width: 768px) {
@@ -988,7 +1083,7 @@ h6 {
     }
 
     #hero-section .rounded_text img {
-        left: 325px;
+        left: 352px;
     }
 
     #hero-section .discover_btn {
@@ -1018,18 +1113,28 @@ h6 {
         justify-content: space-evenly;
     }
 
+    #services_two svg {
+        left: -12px;
+    }
+
+    #services_two a {
+        left: 35px;
+    }
+
     #footers h1 {
         font-size: 56px;
     }
 
     #brands {
         padding-left: 0px;
-         padding-block: 100px ;
-     }
-     #brands-2{
+        padding-block: 100px;
+    }
+
+    #brands-2 {
         margin-top: 30rem;
         padding-block: 100px;
-     }
+    }
+
     #services_two .services-ring {
         /* position: absolute; */
         left: 80px;
@@ -1048,28 +1153,3 @@ h6 {
 }
 
 /* ===media query end=== */
-
-
-
-
-.circular_text {
-    animation: rotateText 5s linear infinite;
-    transform-origin: center;
-}
-
-@keyframes rotateText {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-
-
-
-
-
-
-
