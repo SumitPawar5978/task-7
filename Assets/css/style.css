@@ -638,11 +638,12 @@ h6 {
 
 /* ====about info section end== */
 
-/* ===brands section start=== */
-/* #brands hr{
-    border: 0.1px solid rgba(93, 93, 93, 1);
-} */
-/* ===brands section end=== */
+/* ===brands section start===  */
+    #brands {
+       padding-left: 40px;
+        padding-block: 100px ;
+    }
+ /* ===brands section end=== */
 /* ----about page end---- */
 
 /* ===service page start=== */
@@ -878,7 +879,10 @@ h6 {
         font-size: 32px;
         line-height: 40px;
     }
-
+    /* #brands {
+        padding-left: 0px;
+         padding-block: 100px ;
+     } */
     #footers .for_sm_screen {
         display: flex;
         flex-direction: column;
@@ -958,9 +962,10 @@ h6 {
         top: 182px;
         left: -13p;
     }
-    #brands{
-        margin-top: 380px !important;
-    }
+    #brands-2{
+        margin-top: 20rem !important;
+        padding-block: 0px;
+     }
 }
 
 @media (max-width: 768px) {
@@ -1018,9 +1023,13 @@ h6 {
     }
 
     #brands {
-        margin-top: 600px;
-    }
-
+        padding-left: 0px;
+         padding-block: 100px ;
+     }
+     #brands-2{
+        margin-top: 30rem;
+        padding-block: 100px;
+     }
     #services_two .services-ring {
         /* position: absolute; */
         left: 80px;
@@ -1039,3 +1048,28 @@ h6 {
 }
 
 /* ===media query end=== */
+
+
+
+
+.circular_text {
+    animation: rotateText 5s linear infinite;
+    transform-origin: center;
+}
+
+@keyframes rotateText {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+
+
+
